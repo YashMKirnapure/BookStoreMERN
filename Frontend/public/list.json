@@ -1,0 +1,50 @@
+[
+    {
+        "id":1,
+        "name":"Story Book",
+        "title":"Lorem ipsum dolosr sirr jfk ksfd.",
+        "price":0,
+        "category":"Free",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1724490268~exp=1724493868~hmac=5d66ad367a5deba47808fc8c300c7ad35ceb6a44404af8dfbfb9ccca138f49da&w=740"
+    },
+    {
+        "id":2,
+        "name":"Grammar Book",
+        "title":"Lorem ipsum dolosr sirr jfk ksfd.",
+        "price":25,
+        "category":"Academics",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1724490268~exp=1724493868~hmac=5d66ad367a5deba47808fc8c300c7ad35ceb6a44404af8dfbfb9ccca138f49da&w=740"
+    },
+    {
+        "id":3,
+        "name":"Comic Book",
+        "title":"Lorem ipsum dolosr sirr jfk ksfd.",
+        "price":10,
+        "category":"Entertainment",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1724490268~exp=1724493868~hmac=5d66ad367a5deba47808fc8c300c7ad35ceb6a44404af8dfbfb9ccca138f49da&w=740"
+    },
+    {
+        "id":4,
+        "name":"Sports book",
+        "title":"Lorem ipsum dolosr sirr jfk ksfd.",
+        "price":0,
+        "category":"Free",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1724490268~exp=1724493868~hmac=5d66ad367a5deba47808fc8c300c7ad35ceb6a44404af8dfbfb9ccca138f49da&w=740"
+    },
+    {
+        "id":5,
+        "name":"Thesaurus",
+        "title":"Lorem ipsum dolosr sirr jfk ksfd.",
+        "price":35,
+        "category":"Vocabulary",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1724490268~exp=1724493868~hmac=5d66ad367a5deba47808fc8c300c7ad35ceb6a44404af8dfbfb9ccca138f49da&w=740"
+    },
+    {
+        "id":6,
+        "name":"Geographical Book",
+        "title":"Lorem ipsum dolosr sirr jfk ksfd.",
+        "price":0,
+        "category":"free",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1724490268~exp=1724493868~hmac=5d66ad367a5deba47808fc8c300c7ad35ceb6a44404af8dfbfb9ccca138f49da&w=740"
+    }
+]
