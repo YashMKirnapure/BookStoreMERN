@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import Login from "./Login.jsx";
+import axios from "axios";
 
 const Signup = () => {
   const {
@@ -9,7 +11,23 @@ const Signup = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async(data) => {
+    const userInfo = {
+      fullname : data.fullname,
+      email : data.email,
+      password : data.password,
+    }
+    await axios.post("http://localhost:4001/user/signup",userInfo)
+    .then((res)=>{
+      console.log(res.data);
+      if(res.data)
+      {
+        alert("Signup Successfull!")  
+      }
+    }).catch((err)=>{
+      alert("Error: ",err)
+    })
+  };
 
   return (
     <div className="flex h-screen items-center justify-center">
@@ -26,13 +44,30 @@ const Signup = () => {
 
             <h3 className="font-bold text-lg">Signup</h3>
 
-            {/* Email */}
             <div className="mt-4 space-y-2">
               <span>Name</span>
               <br />
               <input
                 type="email"
-                placeholder="Enter yourA email.."
+                placeholder="Enter your email.."
+                className="w-80 px-3 py-1 border rounded-md outline-none"
+                {...register("fullname", { required: true })}
+              />
+              <br />
+              {errors.fullname && (
+                <span className="text-sm text-red-500 ">
+                  This field is required
+                </span>
+              )}
+            </div>
+
+            {/* Email */}
+            <div className="mt-4 space-y-2">
+              <span>email</span>
+              <br />
+              <input
+                type="email"
+                placeholder="Enter your email.."
                 className="w-80 px-3 py-1 border rounded-md outline-none"
                 {...register("email", { required: true })}
               />
