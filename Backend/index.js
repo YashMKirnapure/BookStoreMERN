@@ -2,12 +2,15 @@ import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import bookRoute from "./route/book.route.js";
+import cors from "cors";
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 4000;
 const URI = process.env.MongoDBURI;
+
+app.use(cors());
 
 //connecting to MongoDB
 try{
