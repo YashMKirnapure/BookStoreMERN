@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Login from "./Login.jsx";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 const Signup = () => {
   const {
@@ -22,11 +23,17 @@ const Signup = () => {
       console.log(res.data);
       if(res.data)
       {
-        alert("Signup Successfull!")  
+        toast.success("Sign up Successful!");
       }
-    }).catch((err)=>{
-      alert("Error: ",err)
+      localStorage.setItem("Users",JSON.stringify(res.data.user));
     })
+    .catch((err)=>{
+      if(err.response)
+      {
+        console.log(err);
+        toast.error("Error: "+err.response.data.message);
+      }
+    });
   };
 
   return (
@@ -49,7 +56,7 @@ const Signup = () => {
               <br />
               <input
                 type="email"
-                placeholder="Enter your email.."
+                placeholder="Enter your name.."
                 className="w-80 px-3 py-1 border rounded-md outline-none"
                 {...register("fullname", { required: true })}
               />
