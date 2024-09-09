@@ -2,8 +2,13 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import Login from "./Login";
+import { useAuth } from "../context/AuthProvider";
+import Logout from "./Logout";
 
 const Navbar = () => {
+
+  const [authUser,setAuthUser] = useAuth();
+
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
   );
@@ -147,12 +152,22 @@ const Navbar = () => {
               </svg>
             </label>
 
-            <div className="">
-              <a className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer" onClick={()=>document.getElementById("my_modal_3").showModal()}>
+          {
+            authUser? ( <Logout/> ) : 
+            (
+             <div className="">
+              <a 
+              className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer" 
+              onClick={()=>document.getElementById("my_modal_3").showModal()}>
                 Login
               </a>
               <Login/>
             </div>
+            )
+          }
+
+          {/* Agar authUser hai toh sirf usi ko logout ka option dikhna chahiye or agar new user hai toh use login ka option dikhega */}
+            
           </div>
         </div>
       </div>
